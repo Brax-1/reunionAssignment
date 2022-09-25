@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+	margin: 0%;
+	padding: 0%;
+	font-family: "Fira Sans", sans-serif;
+}
+body {
+	background-color: rgb(27, 27, 27);
+}
+.App-Rent-Title {
+	color: white;
+	margin-bottom: 25px;
+}
+.App-Cover {
+	display: flex;
+	justify-content: center;
+}
+.App-InnerBlock {
+	width: 100%;
+	max-width: 1500px;
+	padding: 50px;
+}
+input {
+	width: 100%;
+	border: none;
+	font-weight: 900;
+	font-size: 20px;
+	outline: none;
+}
+.App-house-Grid {
+	width: 100%;
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 30px;
+	column-gap: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (max-width: 1400px) {
+	.App-house-Grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media only screen and (max-width: 1100px) {
+	.App-house-Grid {
+		grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+	}
+    .App-InnerBlock {
+        padding: 20px;
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 600px) {
+	.App-house-Grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+    .App-Rent-Title {
+        font-size: 20px;
+    }
 }

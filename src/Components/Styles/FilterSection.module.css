@@ -1,0 +1,50 @@
+.filtersection_main{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.FilterSection_Filter{
+    border-right: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 0 20px;
+    width: 100%;
+}
+.FilterSection_Filter_Title{
+    color: rgb(96, 96, 96);
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+@media only screen and (max-width: 900px) {
+	.filtersection_main{
+        width: 100%;
+        height: 450px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+    .filtersection_main_open{
+        animation: openFilter 0.5s;
+    }
+    .filtersection_main_close{
+        height: 0;
+    }
+	.filtersection_main Button{
+        margin: 20px 0;
+        padding: 10px 0;
+    }
+    .FilterSection_Filter{
+        border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+        border-right:none;
+        padding: 20px 0px;
+        width: 90%;
+        margin: 0px 0;
+    }
+}
